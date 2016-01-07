@@ -1,1 +1,1 @@
-# Notificaionts API
+# Notifications API
