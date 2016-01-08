@@ -39,6 +39,7 @@ Response:
   ]
 }
 ```
+
 ### Get Notification by ID
 + HTTP Method: `GET`
 + URL: `http://<domain>:<port>/api/debug/notifications/<notification_id>`
@@ -66,6 +67,49 @@ Response:
   }
 }
 ```
+
+### Get Notification by State
+Allows to filter notifications by state. This way you can get only pending, sent, idle, etc... notifications.
+
++ HTTP Method: `GET`
++ URL: `http://<domain>:<port>/api/debug/notifications/state/<notification_state>`
+
+Example:
+
+Query:
+
+```
+curl -X GET -H "Cache-Control: no-cache" 'http://localhost:3000/api/debug/notifications/state/sent'
+```
+Response:
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "_id": "raoKrckQ2fAbzoRvm",
+      "deviceId": "abc123",
+      "data": {
+        "type": "sync",
+        "text": "ready to rock!!"
+      },
+      "status": "sent",
+      "createdAt": "2016-01-08T00:01:46.910Z"
+    },
+    {
+      "_id": "A3XCXZ4JmuTGGtH2D",
+      "deviceId": "abc123",
+      "data": {
+        "type": "sync",
+        "text": "time to rock&roll!!"
+      },
+      "status": "sent",
+      "createdAt": "2016-01-08T00:20:51.231Z"
+    }
+  ]
+}
+```
+
 ### Create Notification
 + HTTP Method: `POST`
 + URL: `http://<domain>:<port>/api/debug/notifications`
