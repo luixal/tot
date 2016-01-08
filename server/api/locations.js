@@ -10,7 +10,7 @@ getApi().addRoute(
   // {},
   {
     post: function() {
-      if (this.bodyParams.deviceId && this.bodyParams.lat && this.bodyParams.lng) {
+      if (this.bodyParams.hasOwnProperty('deviceId') && this.bodyParams.hasOwnProperty('lat') && this.bodyParams.hasOwnProperty('lng')) {
         try {
           var locationId = Locations.insert(
             {
