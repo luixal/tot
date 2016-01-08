@@ -68,18 +68,18 @@ Response:
 }
 ```
 
-### Get Notification by State
-Allows to filter notifications by state. This way you can get only pending, sent, idle, etc... notifications.
+### Get Notification by Status
+Allows to filter notifications by its status. This way you can get only pending, sent, idle, etc... notifications.
 
 + HTTP Method: `GET`
-+ URL: `http://<domain>:<port>/api/debug/notifications/state/<notification_state>`
++ URL: `http://<domain>:<port>/api/debug/notifications/status/<notification_state>`
 
 Example:
 
 Query:
 
 ```
-curl -X GET -H "Cache-Control: no-cache" 'http://localhost:3000/api/debug/notifications/state/sent'
+curl -X GET -H "Cache-Control: no-cache" 'http://localhost:3000/api/debug/notifications/status/sent'
 ```
 Response:
 ```json

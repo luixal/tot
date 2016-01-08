@@ -6,12 +6,12 @@ getApi().addCollection(
 );
 
 getApi().addRoute(
-  'notifications/state/:state',
+  'notifications/status/:status',
   {
     get: function() {
       return {
         status: "success",
-        data: Notifications.find({status: this.urlParams.state}).fetch()
+        data: Notifications.find({status: this.urlParams.status}).fetch()
       }
     }
   }
