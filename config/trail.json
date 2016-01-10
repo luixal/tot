@@ -1,0 +1,18 @@
+{
+  "trail": {
+    "transports": [
+      {
+        "type": "console",
+        "options": {
+          "meta": false
+        }
+      },
+      {
+        "type": "mongo",
+        "options": {
+          "collection": "logs"
+        }
+      }
+    ]
+  }
+}
